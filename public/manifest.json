@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "SiteLens",
+  "version": "1.0.0",
+  "description": "Advanced developer tool for inspecting CSS styles, analyzing network infrastructure, SSL certificates, and SEO metadata instantly.",
+  "permissions": [
+    "activeTab",
+    "sidePanel",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "SiteLens"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/index.js"],
+      "css": ["src/content/styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.html",
+        "sidepanel.html",
+        "assets/*",
+        "content.css",
+        "content.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

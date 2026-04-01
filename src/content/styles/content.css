@@ -1,0 +1,74 @@
+/* ============================================
+   SiteLens Content Script Styles
+   Injected into the page for overlay visuals
+   ============================================ */
+
+/* Highlight overlay when hovering */
+.sitelens-highlight-overlay {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483646;
+  border: 2px solid rgba(124, 92, 252, 0.8);
+  background: rgba(124, 92, 252, 0.08);
+  transition: all 0.12s ease-out;
+  border-radius: 2px;
+}
+
+/* Selected element indicator */
+.sitelens-selected-overlay {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483646;
+  border: 2px solid rgba(124, 92, 252, 1);
+  background: rgba(124, 92, 252, 0.12);
+  border-radius: 2px;
+}
+
+/* Element info tooltip */
+.sitelens-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  pointer-events: none;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e0e0ff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(124, 92, 252, 0.3);
+  max-width: 320px;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  animation: sitelens-fade-in 0.15s ease-out;
+}
+
+.sitelens-tooltip-tag {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.sitelens-tooltip-id {
+  color: #67e8f9;
+}
+
+.sitelens-tooltip-class {
+  color: #86efac;
+}
+
+.sitelens-tooltip-dims {
+  color: #94a3b8;
+  font-size: 10px;
+  margin-left: 8px;
+}
+
+/* Cursor override during inspection */
+.sitelens-inspecting,
+.sitelens-inspecting * {
+  cursor: crosshair !important;
+}
+
+@keyframes sitelens-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

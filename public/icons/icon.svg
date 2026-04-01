@@ -1,0 +1,21 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="4"/>
+
+  <!-- Website grid -->
+  <rect x="28" y="32" width="48" height="36" rx="6" fill="#F2F2F2" stroke="#CCCCCC" stroke-width="2"/>
+  <line x1="28" y1="46" x2="76" y2="46" stroke="#CCCCCC" stroke-width="2"/>
+  <line x1="44" y1="32" x2="44" y2="68" stroke="#CCCCCC" stroke-width="2"/>
+  <line x1="60" y1="32" x2="60" y2="68" stroke="#CCCCCC" stroke-width="2"/>
+
+  <!-- Lens circle -->
+  <circle cx="70" cy="70" r="22" fill="none" stroke="#E85D04" stroke-width="6"/>
+
+  <!-- Lens handle -->
+  <line x1="85" y1="85" x2="104" y2="104" stroke="#E85D04" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Highlight dot -->
+  <circle cx="62" cy="64" r="4" fill="#E85D04"/>
+
+</svg>
